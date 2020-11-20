@@ -1,0 +1,15 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <h1 class="d-3"><%= title %></h1>
+  <div class="d-flex">
+    <% posts.map(post=>{ %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+             <h5 class="card-title"><%= post.title %></h5>
+             <p class="card-text"><%= post.post.substring(0, 100)+ '...' %></h5>
+               <a href="/posts/<%= post.id%>" class="btn btn-primary mt-10">Read more ...</a>
+              </div>
+            </div>
+         <% }) %>
+  </div>
+</div>
